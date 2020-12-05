@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test message</title>
+  </head>
+  <body>
+    <div>
+        <p>{{ message }}</p>
+    </div>
+
+    <div>
+        <form method="POST" action="/">
+        Type your message:<br>
+        <input type="text" name="sql_message"><br>
+        <button type="submit" value="Submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        {% if sql_message|length > 0 %}
+            <p>
+            {% print("SQL message: " + sql_message) %}
+            </p>
+        {% endif %}
+    </div>
+  </body>
+</html>
