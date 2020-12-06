@@ -16,7 +16,7 @@ def sql_connect():
     user = 'sa'
     password = 'yourStrong(!)Password'
     db = 'mito'
-    host = '192.100.10.10'
+    host = '172.17.0.2'
  
     conn = pymssql.connect(host, user, password, db)
     return conn
